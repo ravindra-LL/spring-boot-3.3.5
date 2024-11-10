@@ -40,5 +40,5 @@ out/
 .env
 
 # Spring Boot configuration
-src/main/resources/application.properties
+src/main/resources/application*.properties
 src/main/resources/application.yml
