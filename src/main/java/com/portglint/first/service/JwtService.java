@@ -41,7 +41,8 @@ public class JwtService {
                     .compact();
         } catch (Exception e) {
             log.error("Error generating JWT token: {}", e.getMessage());
-            throw new JwtGenerationException("Failed to generate JWT token", e);
+            return "";
+            // throw new JwtGenerationException("Failed to generate JWT token", e);
         }
     }
 
