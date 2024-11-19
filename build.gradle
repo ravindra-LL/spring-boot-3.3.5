@@ -63,3 +63,6 @@ configurations {
 		extendsFrom developmentOnly
 	}
 }
+
+sourceCompatibility = '17'
+targetCompatibility = '17'

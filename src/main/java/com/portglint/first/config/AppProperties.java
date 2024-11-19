@@ -26,4 +26,4 @@ public class AppProperties {
         private List<String> allowedOrigins = new ArrayList<>();
         private List<String> allowedMethods = new ArrayList<>();
     }
-} 
+}

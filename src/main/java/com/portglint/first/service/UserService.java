@@ -33,15 +33,15 @@ public class UserService {
 
     public Optional<User> updateUser(String id, User user) {
         return userRepository.findById(id)
-            .map(existingUser -> {
-                existingUser.setEmail(user.getEmail());
-                if (user.getPassword() != null) {
-                    existingUser.setPassword(passwordEncoder.encode(user.getPassword()));
-                }
-                existingUser.setFirstName(user.getFirstName());
-                existingUser.setLastName(user.getLastName());
-                return userRepository.save(existingUser);
-            });
+                .map(existingUser -> {
+                    existingUser.setEmail(user.getEmail());
+                    if (user.getPassword() != null) {
+                        existingUser.setPassword(passwordEncoder.encode(user.getPassword()));
+                    }
+                    existingUser.setFirstName(user.getFirstName());
+                    existingUser.setLastName(user.getLastName());
+                    return userRepository.save(existingUser);
+                });
     }
 
     public void deleteUser(String id) {
